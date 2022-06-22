@@ -72,9 +72,7 @@ export default function Home() {
         </div>
         <div>
           <Label htmlFor="resBody">Response body</Label>
-          <Description>
-            The JSON content your response body will return.
-          </Description>
+          <Description>The content your response body will return.</Description>
           <Input
             as="textarea"
             id="resBody"
