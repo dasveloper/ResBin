@@ -1,3 +1,4 @@
+import NextCors from "nextjs-cors";
 import { getBinById } from "../../../../services/bin";
 import rateLimiter from "../../../../lib/rateLimiter";
 
@@ -6,6 +7,12 @@ const limiter = rateLimiter({
 });
 
 export default async function handler(req, res) {
+  await NextCors(req, res, {
+    methods: ["GET", "HEAD"],
+    origin: "*",
+    optionsSuccessStatus: 200,
+  });
+
   const { method } = req;
   if (method === "GET") {
     // Get binId
