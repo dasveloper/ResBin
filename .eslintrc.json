@@ -1,0 +1,12 @@
+{
+  "extends": ["next/core-web-vitals", "airbnb", "prettier"],
+  "rules": {
+    "react/react-in-jsx-scope": "off", // Needed to allow .js pages/components
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }], // Needed to allow .js pages/components
+    "jsx-a11y/anchor-is-valid": "off", // Needed to allow Next Links
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}], // Needed too allow prop-types reference
+    "import/prefer-default-export": "off", // Allow single named exports
+    "react/jsx-props-no-spreading": "off", // Needed too allow App "pageProps" to be spread
+    "react/prop-types": "off" // Leaving proptypes off 
+  }
+}
